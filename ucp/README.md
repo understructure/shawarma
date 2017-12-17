@@ -60,39 +60,38 @@ command.
 
 
 OPTIONS:
-   --debug, -D                  Enable debug mode
-   --jsonlog                    Produce json formatted output for easier parsing
-   --interactive, -i            Run in interactive mode and prompt for configuration values
-   --admin-username value       The UCP administrator username [$UCP_ADMIN_USER]
-   --admin-password value       The UCP administrator password [$UCP_ADMIN_PASSWORD]
-   --san value                  Add subject alternative names to certificates (e.g. --san www1.acme.com --san www2.acme.com) [$UCP_HOSTNAMES]
-   --host-address value         The network address to advertise to other nodes. Format: IP address or network interface name [$UCP_HOST_ADDRESS]
-   --data-path-addr value       Address or interface to use for data path traffic. Format: IP address or network interface name [$UCP_DATA_PATH_ADDR]
-   --controller-port value      Port for the web UI and API (default: 443)
-   --swarm-grpc-port value      Port for communication between nodes (default: 2377)
-   --dns value                  Set custom DNS servers for the UCP containers [$DNS]
-   --dns-opt value              Set DNS options for the UCP containers [$DNS_OPT]
-   --dns-search value           Set custom DNS search domains for the UCP containers [$DNS_SEARCH]
-   --unlock-key value           The unlock key for this swarm-mode cluster, if one exists. [$UNLOCK_KEY]
-   --existing-config            Use an existing UCP config during this installation. The install will fail if a config is not found
-   --pull value                 Pull UCP images: 'always', when 'missing', or 'never' (default: "missing")
-   --registry-username value    Username to use when pulling images [$REGISTRY_USERNAME]
-   --registry-password value    Password to use when pulling images [$REGISTRY_PASSWORD]
-   --kv-timeout value           Timeout in milliseconds for the key-value store (default: 5000) [$KV_TIMEOUT]
-   --kv-snapshot-count value    Number of changes between key-value store snapshots (default: 20000) [$KV_SNAPSHOT_COUNT]
-   --disable-tracking           Disable anonymous tracking and analytics
-   --disable-usage              Disable anonymous usage reporting
-   --external-server-cert       Customize the certificates used by the UCP web server
-   --preserve-certs             Don't generate certificates if they already exist
+* --debug, -D                  Enable debug mode
+* --jsonlog                    Produce json formatted output for easier parsing
+* --interactive, -i            Run in interactive mode and prompt for configuration values
+* --admin-username value       The UCP administrator username [$UCP_ADMIN_USER]
+* --admin-password value       The UCP administrator password [$UCP_ADMIN_PASSWORD]
+* --san value                  Add subject alternative names to certificates (e.g. --san www1.acme.com --san www2.acme.com) [$UCP_HOSTNAMES]
+* --host-address value         The network address to advertise to other nodes. Format: IP address or network interface name [$UCP_HOST_ADDRESS]
+* --data-path-addr value       Address or interface to use for data path traffic. Format: IP address or network interface name [$UCP_DATA_PATH_ADDR]
+* --controller-port value      Port for the web UI and API (default: 443)
+* --swarm-grpc-port value      Port for communication between nodes (default: 2377)
+* --dns value                  Set custom DNS servers for the UCP containers [$DNS]
+* --dns-opt value              Set DNS options for the UCP containers [$DNS_OPT]
+* --dns-search value           Set custom DNS search domains for the UCP containers [$DNS_SEARCH]
+* --unlock-key value           The unlock key for this swarm-mode cluster, if one exists. [$UNLOCK_KEY]
+* --existing-config            Use an existing UCP config during this installation. The install will fail if a config is not found
+* --pull value                 Pull UCP images: 'always', when 'missing', or 'never' (default: "missing")
+* --registry-username value    Username to use when pulling images [$REGISTRY_USERNAME]
+* --registry-password value    Password to use when pulling images [$REGISTRY_PASSWORD]
+* --kv-timeout value           Timeout in milliseconds for the key-value store (default: 5000) [$KV_TIMEOUT]
+* --kv-snapshot-count value    Number of changes between key-value store snapshots (default: 20000) [$KV_SNAPSHOT_COUNT]
+* --disable-tracking           Disable anonymous tracking and analytics
+* --disable-usage              Disable anonymous usage reporting
+* --external-server-cert       Customize the certificates used by the UCP web server
+* --preserve-certs             Don't generate certificates if they already exi* 
+* --external-service-lb value  Set the IP address of the load balancer that published services are expected to be reachable on
+* --enable-profiling           Enable performance profiling
+* --license value              Add a license: e.g. --license "$(cat license.lic)" [$UCP_LICENSE]
+* --force-insecure-tcp         Force install to continue even with unauthenticated Docker Engine ports.
 
-   --external-service-lb value  Set the IP address of the load balancer that published services are expected to be reachable on
-   --enable-profiling           Enable performance profiling
-   --license value              Add a license: e.g. --license "$(cat license.lic)" [$UCP_LICENSE]
-   --force-insecure-tcp         Force install to continue even with unauthenticated Docker Engine ports.
-   
 *Backwards Compatibility*
 
-   --swarm-port value           Port for the Docker Swarm manager. Used for backwards compatibility (default: 2376)
-   --swarm-experimental         Enable Docker Swarm experimental features. Used for backwards compatibility
-   --binpack                    Set the Docker Swarm scheduler to binpack mode. Used for backwards compatibility
-   --random                     Set the Docker Swarm scheduler to random mode. Used for backwards compatibility
+* --swarm-port value           Port for the Docker Swarm manager. Used for backwards compatibility (default: 2376)
+* --swarm-experimental         Enable Docker Swarm experimental features. Used for backwards compatibility
+* --binpack                    Set the Docker Swarm scheduler to binpack mode. Used for backwards compatibility
+* --random                     Set the Docker Swarm scheduler to random mode. Used for backwards compatibility
