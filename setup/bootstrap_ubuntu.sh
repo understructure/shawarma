@@ -36,3 +36,5 @@ pip install --upgrade pip
 
 echo "alias python=python3
 " >> /home/ubuntu/.bashrc
+
+pip install jupyter
