@@ -24,6 +24,15 @@ sudo apt-get update
 
 sudo apt-get install -y docker-ce
 
-sudo adduser $USER docker
+sudo adduser ubuntu docker
 
 echo "You'll need to log off and back on to be able to run 'sudo docker hello-world', but you should be able to do that now!"
+
+echo "installing pip"
+
+apt install -y python-pip
+
+pip install --upgrade pip
+
+echo "alias python=python3
+" >> /home/ubuntu/.bashrc
